@@ -1,0 +1,10 @@
+<div class="posts">
+    <div class="post" ng-repeat="request in requests">
+        <div class="post-content">
+            <h3><a href="#/ask/{{request._id}}">{{request.request}}</a></h3>
+            <p>
+                submitted by {{request._creator.username}}
+            </p>
+        </div>
+    </div>
+</div>

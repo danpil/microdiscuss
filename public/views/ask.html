@@ -1,0 +1,38 @@
+<div class="post">
+  <div class="post-content">
+    <h3><a href="#/ask/{{request._id}}">{{request.request}}</a></h3>
+
+    <p>
+      submitted by {{request._creator.username}}, {{comments.length}} comments
+    </p>
+  </div>
+</div>
+<ul class="comments">
+  <li ng-repeat="comment in comments">
+    <h4>
+      <span class="author">{{comment._creator.username}}</span>
+      <span class="date">on {{comment._create}}</span>
+    </h4>
+
+    <p>{{comment.response}}</p>
+  </li>
+</ul>
+<form class="comment-form" name="myComment" novalidate ng-submit="addCommentUser(newComment)">
+  <div class="form-group">
+    <label class="control-label" for="username">Username</label>
+    <div class="controls">
+      <input name="username" id="username" type="text" value="" placeholder="Your USERNAME" class="form-control" required ng-model="newComment.username"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="comment">Answer</label>
+    <div class="controls">
+      <textarea class="form-control" rows="3" name="comment" id="comment" required ng-model="newComment.comment" placeholder="Enter your answer "></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn" ng-disabled="myComment.$invalid">Add Answer</button>
+    </div>
+  </div>
+</form>

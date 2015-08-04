@@ -1,0 +1,30 @@
+<div class="posts">
+    <div class="post">
+        <form class="main form" name="myAsk" novalidate ng-submit="addAskUser(newAsk)">
+            <div class="form-group">
+                <label class="control-label" for="username">Username</label>
+                <div class="controls">
+                    <input name="username" id="username" type="text" value="" placeholder="Your USERNAME" class="form-control" required ng-model="newAsk.username"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="question">Question</label>
+                <div class="controls">
+                    <textarea class="form-control" rows="3" name="question" id="question" required ng-model="newAsk.question" placeholder="Enter your question"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" ng-disabled="myAsk.$invalid">Submit</button>
+        </form>
+        <!--<form name="myAsk" novalidate ng-submit="addAskUser(newAsk)">-->
+            <!--<div class="form-group">-->
+                <!--<label for="username">Username</label>-->
+                <!--<input type="text" class="form-control" id="username" placeholder="Username" required ng-model="newAsk.username">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label for="question">Question</label>-->
+                <!--<textarea class="form-control" rows="3" id="question" required ng-model="newAsk.question"></textarea>-->
+            <!--</div>-->
+            <!--<button type="submit" class="btn btn-default" ng-disabled="myAsk.$invalid">Submit</button>-->
+        <!--</form>-->
+    </div>
+</div>
